@@ -1,0 +1,115 @@
+/* Container for d-pad and zoom buttons */
+.zoom-buttons {
+	position: absolute;
+	top: 250px;
+	width: 300px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+/* zoom buttons */
+.zoom {
+	height: 26px;
+	display: flex;
+	flex-direction: row;
+}
+.zoom-out,
+.zoom-in {
+	box-sizing: border-box;
+
+	width: 45px;
+	height: 25px;
+
+	border-color: black;
+	border-width: 0 0 2px;
+}
+
+.zoom-out:active,
+.zoom-in:active {
+	border-bottom: none;
+	margin-top: 0.5px;
+}
+
+.zoom-in {
+	border-right: 1px solid black;
+	border-radius: var(--small-radius) 0 0 var(--small-radius);
+}
+.zoom-out {
+	border-left: 1px solid black;
+	border-radius: 0 var(--small-radius) var(--small-radius) 0;
+}
+
+/* ---------------------------------------------------- */
+
+/* creating the scrolling section/d-pad */
+/* the container div for the 9 divs/buttons */
+.scroll {
+	display: grid;
+	grid-template-rows: repeat(3, 25px);
+	grid-template-columns: repeat(3, 25px);
+	/* background-color: var(--d-pad-background); */
+	background-color: var(--main-background-red);
+}
+/* styling the actual buttons in this section */
+.scroll-btn {
+	width: 100%;
+	top: 0;
+	height: 25px;
+	background-color: var(--d-pad-background);
+
+	border: none;
+	border-radius: var(--small-radius);
+
+	transition-duration: 200ms;
+	transition-timing-function: ease-in-out;
+}
+.scroll-btn:hover {
+	filter: brightness(95%);
+}
+
+.scroll .up,
+.scroll .left,
+.scroll .right,
+.scroll .down {
+	background-color: var(--main-background-red);
+}
+
+.scroll .d-pad.center {
+	background-color: var(--d-pad-background);
+}
+
+.scroll .upper-left-corner,
+.scroll .upper-right-corner,
+.scroll .lower-left-corner,
+.scroll .lower-right-corner {
+	background-color: var(--main-background-red);
+}
+
+/* Each of the divs has a slightly different style... */
+.scroll .upper-left-corner {
+	border-bottom-right-radius: var(--small-radius);
+}
+.scroll .upper-right-corner {
+	border-bottom-left-radius: var(--small-radius);
+}
+.scroll .lower-left-corner {
+	border-top-right-radius: var(--small-radius);
+}
+.scroll .lower-right-corner {
+	border-top-left-radius: var(--small-radius);
+}
+/* For the buttons: */
+.scroll .up-btn {
+	border-radius: var(--small-radius) var(--small-radius) 0 0;
+}
+.scroll .left-btn {
+	border-radius: var(--small-radius) 0 0 var(--small-radius);
+}
+.scroll .down-btn {
+	border-radius: 0 0 var(--small-radius) var(--small-radius);
+}
+.scroll .right-btn {
+	border-radius: 0 var(--small-radius) var(--small-radius) 0;
+}

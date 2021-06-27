@@ -1,0 +1,97 @@
+/* The main gray div for the screen component */
+.pic-screen {
+	position: absolute;
+	background-color: rgb(214, 214, 214);
+	top: 120px;
+	left: 15px;
+	width: 270px;
+	height: 175px;
+
+	border-radius: var(--outermost-rounding);
+}
+/* two white blocks cover the gray: make the "actual screen" */
+.pic-screen-white-1 {
+	background-color: white;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 250px;
+	height: 130px;
+	border-radius: var(--small-radius);
+}
+.pic-screen-white-2 {
+	background-color: white;
+	position: absolute;
+	top: 10px;
+	left: 100px;
+	width: 160px;
+	height: 160px;
+	border-radius: var(--small-radius);
+}
+/* the small yellow button */
+.pic-screen-yellow {
+	width: 12px;
+	height: 12px;
+	background-color: yellow;
+	position: absolute;
+
+	top: 150px;
+	left: 20px;
+
+	border-radius: 99999px;
+}
+/* The button for reversing the images */
+.pic-screen-button {
+	position: absolute;
+	top: 148px;
+	left: 38px;
+	font-size: 12px;
+	width: 12px;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+
+	cursor: pointer;
+}
+
+/* creating the necessary animations for the pokemon sprites */
+@keyframes bounce {
+	from {
+		top: -9px;
+	}
+	to {
+		top: -6px;
+	}
+}
+/* sizing/styling the actual image of the pokemon */
+.pokemon-img {
+	display: block;
+	position: absolute;
+	left: 45px;
+	top: -10px;
+	width: 150px;
+	z-index: 1;
+
+	/* using the created key frames to animate the pokemon */
+	animation-name: bounce;
+	animation-direction: alternate;
+	animation-duration: 2000ms;
+	animation-iteration-count: infinite;
+}
+
+/* The small decorative "speaker" */
+.four-vents {
+	position: absolute;
+	top: 147px;
+	left: 65px;
+	height: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.vent {
+	width: 30px;
+	height: 2px;
+	background-color: rgb(166, 166, 166);
+	border-radius: 2000px;
+}

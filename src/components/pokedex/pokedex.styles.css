@@ -1,0 +1,111 @@
+@import url(../../global.css);
+
+/* creating the layout for both large halves of the pokedex to sit in */
+.entire-pokedex {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+/* the div containing left half of pokedex,
+ including the hinge + pic screen + number */
+.left-side {
+	width: 325px;
+	height: 500px;
+	background-color: var(--main-background-red);
+	position: relative;
+	/* creating rounded edges */
+	border-top-left-radius: var(--outermost-rounding);
+	border-top-right-radius: var(--small-radius);
+	border-bottom-left-radius: var(--outermost-rounding);
+}
+
+/* div containing right half of pokedex, with info screen */
+.right-side {
+	position: relative;
+	width: 300px;
+	height: 400px;
+	background-color: var(--main-background-red);
+
+	/* creating rounded edges */
+	border-top-right-radius: var(--outermost-rounding);
+	border-bottom-right-radius: var(--outermost-rounding);
+}
+
+/* the hinge of the pokedex */
+.poke-hinge {
+	/* sizing and positioning */
+	width: 25px;
+	height: 500px;
+	position: absolute;
+	left: 300px;
+	/* make sure the hinge outline is inside the box */
+	box-sizing: border-box;
+	/* color and borders */
+	background-color: var(--hinge-red);
+	border-top-right-radius: var(--small-radius);
+	border: 1px solid rgb(108, 55, 55);
+}
+.poke-hinge > .inner-hinge-top {
+	position: absolute;
+	box-sizing: border-box;
+	width: 25px;
+	height: 25px;
+	background-color: var(--secondary-hinge-red);
+
+	border: 1px solid rgb(108, 55, 55);
+
+	left: -1px;
+	top: 100px;
+}
+.poke-hinge > .inner-hinge-bottom {
+	position: absolute;
+	box-sizing: border-box;
+	width: 25px;
+	height: 25px;
+	background-color: var(--secondary-hinge-red);
+
+	border: 1px solid rgb(108, 55, 55);
+
+	left: -1px;
+	top: 375px;
+}
+
+/* Upper right slanted thing */
+.upper-right-triangle-cover {
+	position: absolute;
+	top: -50px;
+	width: 125px;
+	height: 50px;
+	background-color: var(--main-background-red);
+}
+.upper-right-triangle {
+	box-sizing: content-box;
+	position: absolute;
+	top: -100px;
+	left: 75px;
+
+	border-style: solid;
+	border-color: transparent transparent var(--main-background-red) transparent;
+	border-width: 50px;
+}
+
+/* Big buttons on bottom of right side */
+.big-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 300px;
+
+	position: absolute;
+	top: 330px;
+}
+
+.big-button {
+	width: 100px;
+	height: 50px;
+	border-radius: 5px;
+
+	background-color: rgb(51, 51, 51);
+}

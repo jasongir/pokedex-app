@@ -1,0 +1,46 @@
+@import url(../../global.css);
+.side-arrows-container {
+	position: absolute;
+	top: 440px;
+	left: 20px;
+	width: 260px;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.side-arrows-container > button {
+	width: 50%;
+	height: 35px;
+	font-size: 25px;
+
+	border-width: 0 0 2px 0;
+
+	transition-timing-function: ease-in-out;
+	transition-duration: 100ms;
+}
+.side-arrows-container > button:active {
+	border-width: 0px;
+	margin-top: 1px;
+}
+
+.side-arrows-container button:first-child {
+	/* background-color: blue; */
+	border-top-left-radius: var(--small-radius);
+	border-bottom-left-radius: var(--small-radius);
+
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+
+	border-right-width: 1px;
+}
+
+.side-arrows-container button:last-child {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+
+	border-top-right-radius: var(--small-radius);
+	border-bottom-right-radius: var(--small-radius);
+
+	border-left-width: 1px;
+}

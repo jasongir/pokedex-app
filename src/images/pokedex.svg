@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="pokedex.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   width="16in"
+   height="16in"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="SVGRoot">
+  <defs
+     id="defs833" />
+  <sodipodi:namedview
+     inkscape:window-maximized="0"
+     inkscape:window-y="88"
+     inkscape:window-x="530"
+     inkscape:window-height="1032"
+     inkscape:window-width="1363"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="in"
+     inkscape:cy="646.44491"
+     inkscape:cx="755.36967"
+     inkscape:zoom="0.49497475"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata836">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <rect
+       ry="0.6301505"
+       y="3.5144904"
+       x="2.988369"
+       height="8.1022673"
+       width="6.0188274"
+       id="rect1407"
+       style="fill:#aa0000;stroke-width:0.12378;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill" />
+    <rect
+       style="fill:#aa0000;stroke-width:0.103769;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+       id="rect1407-4"
+       width="4.2300153"
+       height="8.1022673"
+       x="5.430912"
+       y="3.5144904"
+       ry="0" />
+    <rect
+       style="fill:#d40000;stroke-width:0.0407879;stroke-linejoin:round;stroke-miterlimit:4.5"
+       id="rect1407-5"
+       width="0.65373093"
+       height="8.1022673"
+       x="9.0071964"
+       y="3.5144904"
+       ry="0.019850006" />
+    <rect
+       style="fill:#aa0000;stroke-width:0.112672;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+       id="rect1407-55"
+       width="6.0188274"
+       height="6.7133079"
+       x="9.6609278"
+       y="4.90345"
+       ry="0.52212471" />
+    <rect
+       ry="0"
+       y="4.90345"
+       x="9.6609278"
+       height="6.7133074"
+       width="4.2300153"
+       id="rect1407-4-3"
+       style="fill:#aa0000;stroke-width:0.0944567;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill" />
+  </g>
+</svg>

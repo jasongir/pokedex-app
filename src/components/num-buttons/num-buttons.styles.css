@@ -1,0 +1,26 @@
+.num-buttons {
+	position: absolute;
+	top: 330px;
+	left: 110px;
+
+	display: grid;
+	grid-template-columns: repeat(4, var(--grid-button-dimension));
+	grid-template-rows: var(--grid-button-dimension) var(--grid-button-dimension);
+	gap: 3px;
+}
+
+.num-button {
+	background-color: rgb(103, 103, 224);
+	border: none;
+	border-radius: var(--small-radius);
+
+	transition-timing-function: ease-in-out;
+	transition-duration: 300ms;
+}
+
+.num-button:hover {
+	background-color: rgb(255, 93, 93);
+}
+.num-button:active {
+	background-color: red;
+}

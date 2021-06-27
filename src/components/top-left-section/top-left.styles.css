@@ -1,0 +1,67 @@
+/* The upper left section/triangle thing */
+.upper-section {
+	background-color: var(--top-section-red);
+	position: absolute;
+	width: 300px;
+	height: 100px;
+	border-top-left-radius: var(--outermost-rounding);
+}
+
+/* Upper left details: */
+.upper-section-circle {
+	border-radius: 900px;
+	border: 4px solid white;
+	background-color: rgb(132, 207, 248);
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 25px;
+	left: 25px;
+}
+
+.upper-section-three-dots {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 55px;
+	top: 15px;
+	left: 100px;
+	position: absolute;
+}
+.dot-1,
+.dot-2,
+.dot-3 {
+	width: 12px;
+	height: 12px;
+	background-color: white;
+	border-radius: 90000px;
+}
+.dot-1 {
+	background-color: green;
+}
+.dot-2 {
+	background-color: yellow;
+}
+.dot-3 {
+	background-color: red;
+}
+
+/* Upper left triangle etc. */
+
+.upper-left-triangle-cover {
+	position: absolute;
+	top: 50px;
+	left: 175px;
+	width: 125px;
+	height: 50px;
+	background-color: var(--main-background-red);
+}
+.upper-left-triangle {
+	box-sizing: content-box;
+	position: absolute;
+	left: 125px;
+
+	border-style: solid;
+	border-color: transparent transparent var(--main-background-red) transparent;
+	border-width: 50px;
+}

@@ -1,0 +1,81 @@
+/* The html: */
+
+ {
+	/*<div className="upper-left-mess-container">
+							<div className="upper-left-side-cover-right"></div>
+							<div className="upper-left-side-right"></div>
+							<div className="upper-left-side-cover-left"></div>
+							<div className="upper-left-side-left"></div>
+                  </div>*/
+}
+
+ {
+	/*
+					<div className="upper-right-mess-container">
+						<div className="upper-right-side-wrapper-right"></div>
+						<div className="upper-right-side-right"></div>
+						<div className="upper-right-side-wrapper-left"></div>
+						<div className="upper-right-side-left"></div>
+					</div>
+            */
+}
+
+/* Upper left side mess: */
+.upper-left-mess-container {
+	/*  */
+	position: absolute;
+	background-color: black;
+	width: 300px;
+	height: 50px;
+	top: 50px;
+}
+.upper-left-side-cover-right {
+	/*  */
+}
+.upper-left-side-cover-left {
+	/*  */
+}
+.upper-left-side-left {
+	/*  */
+}
+.upper-left-side-right {
+	/*  */
+}
+
+/* The upper right side mess: */
+.upper-right-mess-container {
+	position: relative;
+}
+.upper-right-side-wrapper-left {
+	position: absolute;
+	top: -50px;
+	height: 50px;
+	width: 150px;
+	background-color: var(--actual-background-color);
+}
+.upper-right-side-left {
+	background-color: var(--main-background-red);
+	position: absolute;
+	top: -50px;
+	height: 50px;
+	width: 150px;
+	border-top-right-radius: 90px 25px;
+}
+.upper-right-side-wrapper-right {
+	position: absolute;
+	top: -50px;
+	left: 150px;
+	height: 50px;
+	width: 150px;
+	background-color: var(--main-background-red);
+}
+.upper-right-side-right {
+	background-color: var(--actual-background-color);
+	position: absolute;
+	height: 50px;
+	width: 150px;
+	left: 150px;
+	top: -50px;
+
+	border-bottom-left-radius: 90px 25px;
+}
