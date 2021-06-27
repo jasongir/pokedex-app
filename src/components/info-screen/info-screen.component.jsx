@@ -4,8 +4,10 @@ import { useRef, useEffect } from "react";
 export const InfoScreen = ({
 	currentPokemon,
 	zoomIn,
-	scrollLeft,
-	scrollTop,
+	scrollLeftAmount,
+	setScrollLeftAmount,
+	scrollTopAmount,
+	setScrollTopAmount,
 }) => {
 	const { name, moves, stats, types, weight, height } = currentPokemon;
 
@@ -15,7 +17,6 @@ export const InfoScreen = ({
 	const zoom = (ref, zoomIn) => {
 		const current = ref.current;
 		const zoomInScale = 2;
-		const zoomOutScale = 1 / zoomInScale;
 
 		if (zoomIn) {
 			// If we're zooming in
@@ -30,26 +31,27 @@ export const InfoScreen = ({
 		}
 	};
 
-	const pan = (ref, direction, amount) => {
+	const handleScroll = (ref) => {
 		const current = ref.current;
-		switch (direction) {
-			case "up":
-				break;
-			case "down":
-				break;
-			case "right":
-				break;
-			case "left":
-				break;
-		}
+		setScrollTopAmount(current.scrollTop);
+		setScrollLeftAmount(current.scrollLeft);
 	};
+
+	useEffect(() => {
+		infoScreen.current.scrollTop = scrollTopAmount;
+		infoScreen.current.scrollLeft = scrollLeftAmount;
+	}, [scrollTopAmount, scrollLeftAmount]);
 
 	useEffect(() => {
 		if (infoDiv.current != null) zoom(infoDiv, zoomIn);
 	}, [zoomIn]);
 
 	return (
-		<div className="info-screen" ref={infoScreen}>
+		<div
+			className="info-screen"
+			ref={infoScreen}
+			onScroll={() => handleScroll(infoScreen)}
+		>
 			{name && moves && stats && types && weight && height && (
 				<div className="info-container" ref={infoDiv}>
 					<h1

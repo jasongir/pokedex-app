@@ -26,9 +26,17 @@ export const Pokedex = () => {
 
 	// state related to the zooming on the right side of the screen
 	const [zoomIn, setZoomIn] = useState(false);
-	useEffect(() => console.log(zoomIn), [zoomIn]);
-	const [scrollLeft, setScrollLeft] = useState(false);
-	const [scrollTop, setScrollTop] = useState(false);
+	const [scrollLeftAmount, setScrollLeftAmount] = useState(null);
+	const [scrollTopAmount, setScrollTopAmount] = useState(null);
+	// keep track of how far we can scroll to not go too far
+	// const [scrollHeight, setScrollHeight] = useState(-1);
+	// TODO: add ^ this so that clients can't go too far when scrolling
+
+	// useEffect(() => {
+	// 	console.log(
+	// 		`zoomIn: ${zoomIn}, scrollLeftAmount: ${scrollLeftAmount}, scrollTopAmount: ${scrollTopAmount}`
+	// 	);
+	// }, [zoomIn, scrollLeftAmount, scrollTopAmount]);
 
 	let firstAllPokemon = [];
 
@@ -61,7 +69,6 @@ export const Pokedex = () => {
 			setFrontImageUrl(allPokemon[pokeNumber].sprites.front_default);
 			setBackImageUrl(allPokemon[pokeNumber].sprites.back_default);
 			setCurrentPokemon(allPokemon[pokeNumber]);
-			// console.log(allPokemon);
 		}
 	}, [allPokemon]);
 
@@ -104,8 +111,27 @@ export const Pokedex = () => {
 				<div className="right-side">
 					<div className="upper-right-triangle"></div>
 					<div className="upper-right-triangle-cover"></div>
-					<InfoScreen currentPokemon={currentPokemon} zoomIn={zoomIn} />
-					<ZoomButtons setZoomIn={setZoomIn} zoomVal={zoomIn} />
+					<InfoScreen
+						currentPokemon={currentPokemon}
+						zoomIn={zoomIn}
+						scrollLeftAmount={scrollLeftAmount}
+						setScrollLeftAmount={setScrollLeftAmount}
+						scrollTopAmount={scrollTopAmount}
+						setScrollTopAmount={setScrollTopAmount}
+					/>
+					<ZoomButtons
+						setZoomIn={setZoomIn}
+						zoomVal={zoomIn}
+						scrollLeftAmount={scrollLeftAmount}
+						setScrollLeftAmount={setScrollLeftAmount}
+						scrollTopAmount={scrollTopAmount}
+						setScrollTopAmount={setScrollTopAmount}
+					/>
+
+					{/*
+                  const [scrollLeftAmount, setScrollLeftAmount] = useState(null);
+                  const [scrollTopAmount, setScrollTopAmount] = useState(null);
+               */}
 
 					<div className="big-buttons">
 						<div className="big-button big-button-1"></div>
