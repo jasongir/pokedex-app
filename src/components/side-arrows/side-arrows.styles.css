@@ -10,6 +10,8 @@
 }
 
 .side-arrows-container > button {
+	background-color: var(--button-background-color);
+
 	width: 50%;
 	height: 35px;
 	font-size: 25px;
