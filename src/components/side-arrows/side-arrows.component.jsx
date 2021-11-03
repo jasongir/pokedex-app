@@ -15,8 +15,8 @@ export const SideArrows = ({ number, changeNumber, size }) => {
 
 	return (
 		<div className="side-arrows-container">
-			<button onClick={handleChangeLeft}>⏴</button>
-			<button onClick={handleChangeRight}>⏵</button>
+			<button onClick={handleChangeLeft}>🡠</button>
+			<button onClick={handleChangeRight}>🡢</button>
 		</div>
 	);
 };
